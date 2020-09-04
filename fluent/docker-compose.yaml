@@ -1,0 +1,12 @@
+version: '3'
+services:
+  fluentd:
+    build:
+      context: .
+      args:
+        - FLUENT_CONFIG_FILE=${FLUENT_CONFIG_FILE}    
+    container_name: fluent-with-prometheus
+    volumes:
+      - /opt/jfrog/artifactory/var/log:/artifactory/var/log
+    ports:
+      - 24231:24231
