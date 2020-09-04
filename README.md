@@ -27,6 +27,9 @@ export FLUENT_CONFIG_FILE=fluent.conf.artifactory
 docker-compose up -d
 ```
 
+Remark:
+- make sure that log files are accessible for fluent user
+
 #### Xray (optional)
 connect into the machine hosting **Xray** log files and copy the fluent folder.
 
@@ -36,6 +39,9 @@ cd fluent
 export FLUENT_CONFIG_FILE=fluent.conf.artifactory
 docker-compose up -d
 ```
+
+Remark:
+- make sure that log files are accessible for fluent user
 
 ### Monitoring
 connect into the machine where your monitoring tool suite will be running and copy the *docker-compose.yaml, prometheus folder, grafana folder*.
